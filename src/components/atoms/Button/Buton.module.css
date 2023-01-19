@@ -1,0 +1,33 @@
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 30px;
+  gap: 10px;
+  background: #EA3A60;
+  border-radius: 56px;
+
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 31px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: capitalize;
+
+  color: #FCFCFC;
+}
+
+.small {
+  font-weight: 400;
+  font-size: 16px;
+  padding: 8px 16px;
+}
+
+.large {
+  font-weight: 700;
+  font-size: 24px;
+}
