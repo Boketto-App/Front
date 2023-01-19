@@ -7,12 +7,12 @@ const LandingBody = () => {
   return (
     <div className={styles.body}>
       <h3 className={styles.bodySubtitle}>
-        Automatiza al <span className='highlight'>instante </span>
-        Crece tu emprendimiento
+        Automatiza al <span className='highlight'>instante </span><br />
+        Crece tu emprendimiento <br />
         No hagas el trabajo duro
       </h3>
       <p className={styles.appDescription}>
-        Integra Redes Sociales, e-commerce y cualquier otra App en tu organizacion y olvidate
+        Integra Redes Sociales, e-commerce<br />y cualquier otra App en tu organizacion y olvidate
       </p>
 
       <div className='sliderContainer'>

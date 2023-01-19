@@ -17,13 +17,13 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
+      <main style={{ display: 'flex', flexDirection: 'column' }}>
         <Header setIsSidebarOpen={setIsSidebarOpen} />
         {isSidebarOpen && <Sidebar isSidebarOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen} />}
 
         <LandingBody />
 
-        <div style={{ justifyContent: 'center', display: 'flex' }}>
+        <div style={{ display: 'flex', alignSelf: 'center', margin: '24px' }}>
           <Button href='' size='small' text='Empezar a automatizar!' />
         </div>
       </main>
