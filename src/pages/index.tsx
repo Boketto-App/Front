@@ -3,6 +3,8 @@ import Head from 'next/head'
 
 import Header from '@/components/organisms/Header'
 import Sidebar from '@/components/organisms/Sidebar'
+import LandingBody from '@/components/organisms/LandingBody'
+import Button from '@/components/atoms/Button'
 
 export default function Home() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
@@ -17,7 +19,13 @@ export default function Home() {
       </Head>
       <main>
         <Header setIsSidebarOpen={setIsSidebarOpen} />
-        {isSidebarOpen && <Sidebar setIsSidebarOpen={setIsSidebarOpen} />}
+        {isSidebarOpen && <Sidebar isSidebarOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen} />}
+
+        <LandingBody />
+
+        <div style={{ justifyContent: 'center', display: 'flex' }}>
+          <Button href='' size='small' text='Empezar a automatizar!' />
+        </div>
       </main>
     </>
   )
