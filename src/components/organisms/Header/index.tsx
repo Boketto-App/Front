@@ -1,10 +1,13 @@
-import { Dispatch, SetStateAction } from 'react';
+import { Dispatch, SetStateAction, useContext } from 'react';
 
 import Image from 'next/image'
 import styles from './Header.module.css'
 import { AiOutlineMenu } from 'react-icons/ai';
+import { SidebarContext } from '@/components/templates/Navigation';
 
-const Header = ({ setIsSidebarOpen }: { setIsSidebarOpen: Dispatch<SetStateAction<boolean>> }) => {
+const Header = () => {
+  const { setIsSidebarOpen } = useContext(SidebarContext)
+
   return (
     <div className={styles.navbar}>
       <div className={styles.logo}>

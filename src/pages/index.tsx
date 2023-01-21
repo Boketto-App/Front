@@ -24,7 +24,7 @@ export default function Home() {
         <LandingBody />
 
         <div style={{ display: 'flex', alignSelf: 'center', margin: '24px' }}>
-          <Button href='' size='small' text='Empezar a automatizar!' />
+          <Button href='/start' size='small' text='Empezar a automatizar!' />
         </div>
       </main>
     </>
