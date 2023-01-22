@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction, useContext } from 'react';
+import { useContext } from 'react';
 
 import Image from 'next/image'
 import styles from './Header.module.css'

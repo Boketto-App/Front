@@ -1,4 +1,5 @@
-import { Dispatch, SetStateAction, useState } from 'react'
+import { useState, useContext } from 'react'
+import { SidebarContext } from '@/components/templates/Navigation';
 
 import { AiOutlineClose } from 'react-icons/ai'
 import styles from './Sidebar.module.css'
@@ -17,7 +18,8 @@ const menuItems = [
   { item: "Resgistrarse", component: <Button href='' size='small' text='Registrarse' key='registro' />, page: null }
 ]
 
-function Sidebar({ setIsSidebarOpen, isSidebarOpen }: { setIsSidebarOpen: Dispatch<SetStateAction<boolean>>, isSidebarOpen: boolean }) {
+function Sidebar() {
+  const { isSidebarOpen, setIsSidebarOpen } = useContext(SidebarContext)
   const [selected, setSelected] = useState('inicio')
 
   return (

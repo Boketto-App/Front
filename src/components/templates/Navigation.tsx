@@ -9,13 +9,13 @@ interface SidebarContext {
 
 export const SidebarContext = createContext<SidebarContext>({ isSidebarOpen: false, setIsSidebarOpen: () => false })
 
-const Navigation = ({ children }: { children: React.ReactElement }) => {
+const Navigation = ({ children }: { children: React.ReactNode | React.ReactNode[] }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
 
   return (
     <SidebarContext.Provider value={{ isSidebarOpen: isSidebarOpen, setIsSidebarOpen: setIsSidebarOpen }}>
       <Header />
-      {isSidebarOpen && <Sidebar isSidebarOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen} />}
+      {isSidebarOpen && <Sidebar />}
       {children}
     </SidebarContext.Provider>
   )
