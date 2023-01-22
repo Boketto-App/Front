@@ -5,6 +5,7 @@ import { AiOutlineClose } from 'react-icons/ai'
 import styles from './Sidebar.module.css'
 import Image from 'next/image'
 import Button from '@/components/atoms/Button'
+import SidebarPortal from '@/HOC/SidebarPortal';
 
 const menuItems = [
   { item: "inicio", page: null },
@@ -23,15 +24,17 @@ function Sidebar() {
   const [selected, setSelected] = useState('inicio')
 
   return (
-    <div className={styles.sidebar}>
-      <AiOutlineClose style={{ cursor: 'pointer' }} onClick={() => setIsSidebarOpen(!isSidebarOpen)} size={30} />
+    <SidebarPortal>
+      <div className={styles.sidebar}>
+        <AiOutlineClose style={{ cursor: 'pointer' }} onClick={() => setIsSidebarOpen(!isSidebarOpen)} size={30} />
 
-      <div className={styles.navigation}>
-        {menuItems.map(item => <div className={item.item === selected ? styles.selected : undefined} onClick={() => setSelected(item.item)} key={item.item}>
-          {item.component || item.item}
-        </div>)}
+        <div className={styles.navigation}>
+          {menuItems.map(item => <div className={item.item === selected ? styles.selected : undefined} onClick={() => setSelected(item.item)} key={item.item}>
+            {item.component || item.item}
+          </div>)}
+        </div>
       </div>
-    </div>
+    </SidebarPortal>
   )
 }
 
